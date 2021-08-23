@@ -12,17 +12,15 @@ const shareCount = member.shares
 
 export default function Home() {
   return (
-  <div>
-
-    {window.ethereum.request({ method: 'eth_requestAccounts' })}
-        
-    <h2>{contract.address}</h2>
-    <h2>{ethers.utils.formatEther("2337132817842795605")}</h2>
-{/*
-    <h3>{member}</h3>
-    <h3>{member.shares}</h3>
-*/}
- <h3> test </h3>
-  </div>
+    <div>  
+      <h2>{contract.address}</h2>
+      <h2>{ethers.utils.formatEther("2337132817842795605")}</h2>
+      {/*
+        {window.ethereum.request({ method: 'eth_requestAccounts' })}
+        <h3>{member}</h3>
+        <h3>{member.shares}</h3>
+      */}
+      <h3>Hello world</h3>
+    </div>
   )
 }
