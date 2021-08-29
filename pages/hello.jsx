@@ -1,21 +1,29 @@
 import getMember from './getMember.js';
 import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
-export default function Home() {
+export default function Hello() {
   const [shareCount, setShareCount] = useState(0);
+  const router = useRouter();
 
   useEffect(async function () {
     setShareCount(await getMember());
   }, []);
 
-  console.log(shareCount);
   return (
     <div>
       <h1>Hello world</h1>
-      //add button to call metamask signature for address //send address to API
-      with page parameters of where its sent from //route to /docs/example.md if
-      they are member
+      {
+        //add button to call metamask signature for address
+        //send address to API with page parameters of where its sent from
+        //route to /docs/example.md if they are member
+      }
       <h1>{shareCount}</h1>
+      {(shareCount != 0) ? (
+        <button type="button" onClick={() => router.push('/secret')}>
+        Click me!!
+        </button> 
+      ) : (<></>)}
     </div>
   );
 }

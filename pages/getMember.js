@@ -653,7 +653,8 @@ export default async function getMember() {
     },
   ];
   const contract = new ethers.Contract(contractAddress, abi, provider);
-  const userAddress = '0x0b5f5a722ac5e8ecedf4da39a656fe5f1e76b34c'; //jonathanp
+  //const userAddress = '0x0b5f5a722ac5e8ecedf4da39a656fe5f1e76b34c'; //jonathanp
+  const userAddress = '0x0b5f5a722ac5e8ecedf4da39a656fe5f1e76b34d'; //non-member
   const member = await contract.members(userAddress);
   const string = BigNumber.from(member[1]).toString();
   console.log(string);
