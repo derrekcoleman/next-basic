@@ -3,12 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
 export default function Hello() {
-  const [shareCount, setShareCount] = useState(0);
-  const router = useRouter();
-
-  useEffect(async function () {
-    setShareCount(await getMember());
-  }, []);
 
   return (
     <div>
@@ -19,6 +13,7 @@ export default function Hello() {
         //route to /docs/example.md if they are member
       }
       <h1>{shareCount}</h1>
+
       {(shareCount != 0) ? (
         <button type="button" onClick={() => router.push('/secret')}>
         Click me!!
