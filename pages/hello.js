@@ -2,7 +2,7 @@ import getMember from './getMember.js';
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
-export default function Hello() {
+export default function Hello({ shareCount }) {
 
   return (
     <div>
