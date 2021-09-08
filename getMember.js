@@ -40,13 +40,11 @@ export default async function getMember() {
   const contract = new ethers.Contract(contractAddress, abi, provider);
   const memberData = await contract.members(userAddress);
 
-  /*
   //Method 1: Return share count as a number
   const shares = BigNumber.from(memberData[1]).toNumber();
   return shares;
-  */
 
-  //Method 2: Return 'exists' value as a boolean
+  /* //Method 2: Return 'exists' value as a boolean
   const existence = memberData.exists;
-  return existence;
+  return existence; */
 }
